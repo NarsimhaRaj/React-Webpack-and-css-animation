@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+}
+
+.indicator,
+.indicator-active {
+    display: block;
+    position: relative;
+    margin: 0 2px;
+    padding: 0;
+    width: 14px;
+    height: 14px;
+    visibility: visible;
+    border-radius: 50%;
+
+    background: white;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: lightgray;
+        z-index: 1;
+    }
+}
+
+.indicator-active {
+    &::after {
+        background: cornflowerblue;
+    }
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 1;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+img{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.carousel-container{
+    width: 60%;
+    margin:auto;
+    overflow: hidden;
+}
+
+.carousel-slide{
+    display: flex;
+    width:100%;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.carousel_buttons{
+    position: absolute;
+    left: 48%;
+    top: 100%;
+    display: flex;
+    align-items: center;
+}
