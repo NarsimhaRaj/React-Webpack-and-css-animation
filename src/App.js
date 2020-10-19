@@ -4,6 +4,7 @@ import { Carousel } from './js/Components/Carousel/carousel';
 import { GalleryCarousel } from './js/Components/GalleryCarousel/gallery-carousel';
 import { Input } from './js/Components/Input/input';
 import { Menu } from './js/Components/Menu/menu';
+import { Wheel } from './js/Components/Wheel/wheel';
 
 function App() {
   const [menu, setMenu] = useState(false);
@@ -41,6 +42,12 @@ function App() {
 
       </div>
       <GalleryCarousel></GalleryCarousel>
+      <div style={{width: "100%", height: "30px"}}>
+      </div>
+      <Wheel></Wheel> 
+      <div style={{width: "100%", height: "30px"}}>
+      </div>
+      {/* <MyCarousel></MyCarousel> */}
     </div>
   );
 }

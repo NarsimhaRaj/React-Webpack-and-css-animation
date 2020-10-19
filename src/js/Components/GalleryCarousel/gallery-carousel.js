@@ -27,7 +27,7 @@ export function GalleryCarousel({ }) {
         radius = Math.round( ( carousel.offsetWidth / 2) / Math.tan( Math.PI / 9 ) );
         var angle = 45 * selectedIndex * -1;
         document.querySelector('.carousel').style.transform = 'translateZ(' + -radius + 'px) ' +
-            'rotateY' + '(' + angle + 'deg)';
+            'rotateY' + '(' + angle + 'deg)' + 'scale(';
     }
 
 
@@ -43,12 +43,12 @@ export function GalleryCarousel({ }) {
     function next() {
         var val = selectedIndex+1;
         setSelectIndex(val);
-        setTimeout(()=>rotateCarousel(),500);
+        setTimeout(()=>rotateCarousel(),0);
     }
     function prev() {
         var val = selectedIndex-1;
         setSelectIndex(val);
-        setTimeout(()=>rotateCarousel(),500);
+        setTimeout(()=>rotateCarousel(),0);
     }
 
 
